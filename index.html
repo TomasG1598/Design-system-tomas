@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System — Tomás Gil</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="nav">
+    <span class="nav__logo">TG Design System</span>
+    <ul class="nav__links">
+      <li><a href="#colores">Colores</a></li>
+      <li><a href="#tipografia">Tipografía</a></li>
+      <li><a href="#botones">Botones</a></li>
+      <li><a href="#inputs">Inputs</a></li>
+      <li><a href="#cards">Cards</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenedor">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Design System</h1>
+      <p>Librería de componentes UI construida por Tomás Gil Gómez — Diseñador Industrial & UI Developer</p>
+    </section>
+
+    <!-- SECCIÓN COLORES -->
+    <section id="colores" class="seccion">
+      <h2>Colores</h2>
+      <p class="seccion__descripcion">Paleta de colores base del sistema. Definidos como variables CSS para uso consistente en toda la interfaz.</p>
+      <div class="colores-grid">
+        <div class="color-card">
+          <div class="color-muestra" style="background: var(--color-primario)"></div>
+          <span class="color-nombre">Primario</span>
+          <span class="color-valor">#1E3A5F</span>
+        </div>
+        <div class="color-card">
+          <div class="color-muestra" style="background: var(--color-secundario)"></div>
+          <span class="color-nombre">Secundario</span>
+          <span class="color-valor">#2E6DA4</span>
+        </div>
+        <div class="color-card">
+          <div class="color-muestra" style="background: var(--color-acento)"></div>
+          <span class="color-nombre">Acento</span>
+          <span class="color-valor">#4ECDC4</span>
+        </div>
+        <div class="color-card">
+          <div class="color-muestra" style="background: var(--color-exito)"></div>
+          <span class="color-nombre">Éxito</span>
+          <span class="color-valor">#2ECC71</span>
+        </div>
+        <div class="color-card">
+          <div class="color-muestra" style="background: var(--color-alerta)"></div>
+          <span class="color-nombre">Alerta</span>
+          <span class="color-valor">#F39C12</span>
+        </div>
+        <div class="color-card">
+          <div class="color-muestra" style="background: var(--color-error)"></div>
+          <span class="color-nombre">Error</span>
+          <span class="color-valor">#E74C3C</span>
+        </div>
+        <div class="color-card">
+          <div class="color-muestra" style="background: var(--color-texto)"></div>
+          <span class="color-nombre">Texto</span>
+          <span class="color-valor">#2D2D2D</span>
+        </div>
+        <div class="color-card">
+          <div class="color-muestra" style="background: var(--color-fondo); border: 1px solid #ddd;"></div>
+          <span class="color-nombre">Fondo</span>
+          <span class="color-valor">#F8F9FA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN TIPOGRAFÍA -->
+    <section id="tipografia" class="seccion">
+      <h2>Tipografía</h2>
+      <p class="seccion__descripcion">Escala tipográfica del sistema. Basada en Inter, fuente moderna y legible en cualquier tamaño.</p>
+      <div class="tipo-lista">
+        <div class="tipo-item">
+          <span class="tipo-label">H1 — 48px Bold</span>
+          <h1 class="tipo-muestra">Diseño Industrial</h1>
+        </div>
+        <div class="tipo-item">
+          <span class="tipo-label">H2 — 36px Bold</span>
+          <h2 class="tipo-muestra">UI Developer</h2>
+        </div>
+        <div class="tipo-item">
+          <span class="tipo-label">H3 — 24px Semibold</span>
+          <h3 class="tipo-muestra">Design Systems</h3>
+        </div>
+        <div class="tipo-item">
+          <span class="tipo-label">Body — 16px Regular</span>
+          <p class="tipo-muestra">El diseño es la solución a un problema con restricciones.</p>
+        </div>
+        <div class="tipo-item">
+          <span class="tipo-label">Small — 13px Regular</span>
+          <p class="tipo-muestra tipo-small">Texto secundario, etiquetas y metadatos del sistema.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN BOTONES -->
+    <section id="botones" class="seccion">
+      <h2>Botones</h2>
+      <p class="seccion__descripcion">Variantes de botones del sistema. Cada uno tiene estado normal, hover y activo.</p>
+      <div class="componentes-fila">
+        <button class="btn btn--primario">Primario</button>
+        <button class="btn btn--secundario">Secundario</button>
+        <button class="btn btn--outline">Outline</button>
+        <button class="btn btn--exito">Éxito</button>
+        <button class="btn btn--error">Error</button>
+        <button class="btn btn--primario" disabled>Deshabilitado</button>
+      </div>
+    </section>
+
+    <!-- SECCIÓN INPUTS -->
+    <section id="inputs" class="seccion">
+      <h2>Inputs</h2>
+      <p class="seccion__descripcion">Campos de formulario con estados: normal, focus, error y deshabilitado.</p>
+      <div class="inputs-grid">
+        <div class="input-grupo">
+          <label class="input-label">Nombre completo</label>
+          <input class="input" type="text" placeholder="Tomás Gil Gómez">
+        </div>
+        <div class="input-grupo">
+          <label class="input-label">Correo electrónico</label>
+          <input class="input" type="email" placeholder="tomag0315@gmail.com">
+        </div>
+        <div class="input-grupo">
+          <label class="input-label">Campo con error</label>
+          <input class="input input--error" type="text" placeholder="Dato incorrecto">
+          <span class="input-mensaje-error">Este campo es obligatorio</span>
+        </div>
+        <div class="input-grupo">
+          <label class="input-label">Campo deshabilitado</label>
+          <input class="input" type="text" placeholder="No editable" disabled>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CARDS -->
+    <section id="cards" class="seccion">
+      <h2>Cards</h2>
+      <p class="seccion__descripcion">Componente card reutilizable. Usado para mostrar contenido agrupado con jerarquía visual clara.</p>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card__imagen" style="background: var(--color-primario)"></div>
+          <div class="card__contenido">
+            <span class="card__tag">UI Design</span>
+            <h3 class="card__titulo">Design System</h3>
+            <p class="card__texto">Librería de componentes reutilizables construida con HTML y CSS puro.</p>
+            <button class="btn btn--primario btn--sm">Ver proyecto</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__imagen" style="background: var(--color-acento)"></div>
+          <div class="card__contenido">
+            <span class="card__tag">UX Research</span>
+            <h3 class="card__titulo">App Mobiliario</h3>
+            <p class="card__texto">Case study de UX basado en 5 años de experiencia en diseño industrial.</p>
+            <button class="btn btn--outline btn--sm">Ver caso</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__imagen" style="background: var(--color-secundario)"></div>
+          <div class="card__contenido">
+            <span class="card__tag">Frontend</span>
+            <h3 class="card__titulo">Dashboard</h3>
+            <p class="card__texto">Panel de control interactivo con visualización de datos en tiempo real.</p>
+            <button class="btn btn--outline btn--sm">Ver demo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Construido por <strong>Tomás Gil Gómez</strong> · Diseñador Industrial & UI Developer · Medellín, Colombia</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
